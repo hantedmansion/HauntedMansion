@@ -4,468 +4,954 @@
 
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Haunted Mansion</title>
+<meta name="theme-color" content="#080808">
 
-  <style>
+<title>Haunted Mansion</title>
 
-    * {
+<style>
 
-      box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
-      margin: 0;
 
-      padding: 0;
 
-    }
+* {
 
+  box-sizing: border-box;
 
+  margin: 0;
 
-    body {
+  padding: 0;
 
-      background: #080808;
+}
 
-      color: #f5f5f5;
 
-      font-family: Arial, sans-serif;
 
-      min-height: 100vh;
+body {
 
-    }
+  background:
 
+    radial-gradient(circle at 50% 0%, #29200d 0%, #0c0b08 35%, #050505 75%);
 
+  color: #fff;
 
-    header {
+  font-family: Inter, sans-serif;
 
-      padding: 24px 20px;
+  min-height: 100vh;
 
-      text-align: center;
+}
 
-      border-bottom: 1px solid #2d2615;
 
-    }
 
+button {
 
+  font-family: inherit;
 
-    .logo {
+}
 
-      font-size: 27px;
 
-      font-weight: 800;
 
-      letter-spacing: 3px;
+.app {
 
-      color: #d6b45a;
+  width: 100%;
 
-    }
+  max-width: 600px;
 
+  min-height: 100vh;
 
+  margin: auto;
 
-    .subtitle {
+  padding-bottom: 30px;
 
-      margin-top: 7px;
+}
 
-      color: #999;
 
-      font-size: 13px;
 
-    }
+/* HEADER */
 
 
 
-    main {
+.header {
 
-      max-width: 600px;
+  position: sticky;
 
-      margin: auto;
+  top: 0;
 
-      padding: 25px 18px 40px;
+  z-index: 20;
 
-    }
+  padding: 20px;
 
+  text-align: center;
 
+  background: rgba(5,5,5,.88);
 
-    .hero {
+  backdrop-filter: blur(14px);
 
-      text-align: center;
+  border-bottom: 1px solid rgba(214,180,90,.18);
 
-      padding: 45px 20px;
+}
 
-    }
 
 
+.logo {
 
-    .hero h1 {
+  font-family: Cinzel, serif;
 
-      font-size: 32px;
+  font-size: 24px;
 
-      margin-bottom: 12px;
+  font-weight: 700;
 
-    }
+  letter-spacing: 4px;
 
+  color: #d6b45a;
 
+}
 
-    .hero p {
 
-      color: #aaa;
 
-      line-height: 1.6;
+.tagline {
 
-      margin-bottom: 28px;
+  color: #777;
 
-    }
+  font-size: 10px;
 
+  letter-spacing: 3px;
 
+  margin-top: 5px;
 
-    button {
+}
 
-      border: none;
 
-      cursor: pointer;
 
-      border-radius: 14px;
+/* PAGES */
 
-      padding: 15px 20px;
 
-      font-size: 15px;
 
-      font-weight: bold;
+.page {
 
-    }
+  padding: 25px 18px;
 
+}
 
 
-    .gold-button {
 
-      background: #d6b45a;
+.hidden {
 
-      color: #080808;
+  display: none !important;
 
-      width: 100%;
+}
 
-    }
 
 
+/* HOME */
 
-    .category {
 
-      margin-top: 25px;
 
-    }
+.hero {
 
+  min-height: 70vh;
 
+  display: flex;
 
-    .category h2 {
+  flex-direction: column;
 
-      font-size: 21px;
+  justify-content: center;
 
-      margin-bottom: 15px;
+  text-align: center;
 
-    }
+  padding: 30px 15px;
 
+}
 
 
-    .product {
 
-      background: #111;
+.crest {
 
-      border: 1px solid #292929;
+  font-size: 62px;
 
-      border-radius: 18px;
+  margin-bottom: 20px;
 
-      padding: 18px;
+  filter: drop-shadow(0 0 20px rgba(214,180,90,.25));
 
-      margin-bottom: 14px;
+}
 
-    }
 
 
+.hero h1 {
 
-    .product h3 {
+  font-family: Cinzel, serif;
 
-      margin-bottom: 8px;
+  color: #d6b45a;
 
-    }
+  font-size: 36px;
 
+  letter-spacing: 3px;
 
+  margin-bottom: 12px;
 
-    .product p {
+}
 
-      color: #aaa;
 
-      font-size: 14px;
 
-      line-height: 1.5;
+.hero p {
 
-      margin-bottom: 15px;
+  color: #999;
 
-    }
+  font-size: 14px;
 
+  line-height: 1.7;
 
+  max-width: 400px;
 
-    .price {
+  margin: auto auto 30px;
 
-      color: #d6b45a;
+}
 
-      font-weight: bold;
 
-      margin-bottom: 14px;
 
-    }
+/* BUTTONS */
 
 
 
-    .contact {
+.gold-button {
 
-      margin-top: 30px;
+  width: 100%;
 
-      text-align: center;
+  border: 1px solid #d6b45a;
 
-      padding: 20px;
+  background: linear-gradient(135deg,#e4c66e,#ad8734);
 
-      border-top: 1px solid #292929;
+  color: #080808;
 
-    }
+  padding: 16px;
 
+  border-radius: 14px;
 
+  font-weight: 800;
 
-    .contact a {
+  font-size: 14px;
 
-      color: #d6b45a;
+  letter-spacing: .5px;
 
-      text-decoration: none;
+  box-shadow: 0 8px 30px rgba(214,180,90,.12);
 
-      font-weight: bold;
+  transition: .2s;
 
-    }
+}
 
 
 
-    .hidden {
+.gold-button:active {
 
-      display: none;
+  transform: scale(.97);
 
-    }
+}
 
-  </style>
+
+
+.dark-button {
+
+  width: 100%;
+
+  background: #111;
+
+  color: #ddd;
+
+  border: 1px solid #292929;
+
+  padding: 14px;
+
+  border-radius: 13px;
+
+  margin-top: 10px;
+
+}
+
+
+
+/* TITLES */
+
+
+
+.section-title {
+
+  font-family: Cinzel, serif;
+
+  color: #d6b45a;
+
+  font-size: 23px;
+
+  margin-bottom: 8px;
+
+}
+
+
+
+.section-subtitle {
+
+  color: #777;
+
+  font-size: 13px;
+
+  margin-bottom: 22px;
+
+}
+
+
+
+/* CATEGORY */
+
+
+
+.category-grid {
+
+  display: grid;
+
+  gap: 14px;
+
+}
+
+
+
+.category {
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(145deg,#15130e,#0d0d0d);
+
+  border: 1px solid #2d2718;
+
+  border-radius: 20px;
+
+  padding: 22px;
+
+  transition: .2s;
+
+}
+
+
+
+.category:active {
+
+  transform: scale(.98);
+
+}
+
+
+
+.category-icon {
+
+  font-size: 30px;
+
+  margin-bottom: 15px;
+
+}
+
+
+
+.category h3 {
+
+  font-family: Cinzel, serif;
+
+  color: #e1c36b;
+
+  margin-bottom: 7px;
+
+}
+
+
+
+.category p {
+
+  color: #777;
+
+  font-size: 13px;
+
+}
+
+
+
+/* PRODUCTS */
+
+
+
+.products {
+
+  display: grid;
+
+  gap: 16px;
+
+}
+
+
+
+.product {
+
+  overflow: hidden;
+
+  background: #101010;
+
+  border: 1px solid #292929;
+
+  border-radius: 20px;
+
+}
+
+
+
+.product-image {
+
+  height: 190px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+
+    radial-gradient(circle,#332912 0%,#15120c 45%,#090909 100%);
+
+  font-size: 60px;
+
+}
+
+
+
+.product-info {
+
+  padding: 18px;
+
+}
+
+
+
+.product h3 {
+
+  font-family: Cinzel, serif;
+
+  color: #e1c36b;
+
+  font-size: 18px;
+
+  margin-bottom: 8px;
+
+}
+
+
+
+.product-description {
+
+  color: #888;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  margin-bottom: 13px;
+
+}
+
+
+
+.price {
+
+  color: #fff;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  margin-bottom: 14px;
+
+}
+
+
+
+.price span {
+
+  color: #d6b45a;
+
+}
+
+
+
+/* PRODUCT DETAIL */
+
+
+
+.detail {
+
+  text-align: center;
+
+  padding-top: 15px;
+
+}
+
+
+
+.detail-image {
+
+  height: 260px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+
+    radial-gradient(circle,#3a2c12,#111 60%);
+
+  border-radius: 24px;
+
+  font-size: 90px;
+
+  margin-bottom: 22px;
+
+}
+
+
+
+.detail h2 {
+
+  font-family: Cinzel, serif;
+
+  color: #d6b45a;
+
+  font-size: 26px;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.detail p {
+
+  color: #999;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+
+/* NAVIGATION */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 30px);
+  max-width: 570px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 6px;
+  padding: 7px;
+  background: rgba(15,15,15,.94);
+  backdrop-filter: blur(15px);
+  border: 1px solid #292929;
+  border-radius: 18px;
+  z-index: 30;
+}
+
+.nav-button {
+  border: none;
+  background: transparent;
+  color: #777;
+  padding: 10px 4px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.nav-button.active {
+  color: #d6b45a;
+  background: #1a1710;
+}
+
+/* ANIMATION */
+
+.fade {
+  animation: fade .3s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 
 </head>
 
 <body>
 
-<header>
+<div class="app">
 
+<header class="header">
   <div class="logo">HAUNTED MANSION</div>
-
-  <div class="subtitle">Premium Collection</div>
-
+  <div class="tagline">PREMIUM COLLECTION</div>
 </header>
 
-<main>
+<!-- HOME -->
 
-  <section id="home" class="hero">
+<section id="home" class="page fade">
 
-    <h1>Bienvenue</h1>
+  <div class="hero">
+
+```
+<div class="crest">🏚️</div>
+
+<h1>HAUNTED<br>MANSION</h1>
 
 <p>
-
-  Découvrez notre collection et choisissez votre produit.
-
+  Bienvenue dans notre collection.
+  Explorez nos différentes catégories et découvrez nos produits.
 </p>
 
+<button class="gold-button" onclick="showPage('categories')">
+  🛍️ ENTRER DANS LA BOUTIQUE
+</button>
+```
 
+  </div>
 
-<button class="gold-button" onclick="openShop()">
+</section>
 
-  🛍️ OUVRIR LA BOUTIQUE
+<!-- CATEGORIES -->
 
+<section id="categories" class="page hidden">
+
+  <h2 class="section-title">La Boutique</h2>
+
+  <p class="section-subtitle">
+    Choisissez une collection
+  </p>
+
+  <div class="category-grid">
+
+```
+<button class="category" onclick="showProducts('premium')">
+  <div class="category-icon">⭐</div>
+  <h3>Collection Premium</h3>
+  <p>Découvrir la collection</p>
 </button>
 
-  </section>
-
-  <section id="shop" class="hidden">
-
-<div class="category">
-
-  <h2>⭐ Collection Premium</h2>
-
-
-
-  <div class="product">
-
-    <h3>Produit Premium 1</h3>
-
-
-
-    <p>
-
-      Produit de démonstration Haunted Mansion.
-
-    </p>
-
-
-
-    <div class="price">5 €</div>
-
-
-
-    <button
-
-      class="gold-button"
-
-      onclick="contact('Produit Premium 1')">
-
-      🛒 COMMANDER
-
-    </button>
+<button class="category" onclick="showProducts('fast')">
+  <div class="category-icon">🔥</div>
+  <h3>Collection Fast</h3>
+  <p>Découvrir la collection</p>
+</button>
+```
 
   </div>
 
+</section>
 
+<!-- PRODUCTS -->
 
-  <div class="product">
+<section id="products" class="page hidden">
 
-    <h3>Produit Premium 2</h3>
+  <h2 id="productsTitle" class="section-title"></h2>
 
+  <p class="section-subtitle">
+    Sélectionnez un produit
+  </p>
 
+  <div id="productsList" class="products"></div>
 
-    <p>
+  <button class="dark-button" onclick="showPage('categories')">
+    ← Retour aux catégories
+  </button>
 
-      Produit de démonstration Haunted Mansion.
+</section>
 
-    </p>
+<!-- DETAIL -->
 
+<section id="detail" class="page hidden">
 
+  <div class="detail">
 
-    <div class="price">10 €</div>
+```
+<div id="detailImage" class="detail-image"></div>
 
+<h2 id="detailName"></h2>
 
+<p id="detailDescription"></p>
 
-    <button
+<div id="detailPrice" class="price"></div>
 
-      class="gold-button"
+<button id="orderButton" class="gold-button">
+  🛒 COMMANDER
+</button>
 
-      onclick="contact('Produit Premium 2')">
-
-      🛒 COMMANDER
-
-    </button>
-
-  </div>
-
-
-
-</div>
-
-
-
-<div class="category">
-
-  <h2>🔥 Collection Fast</h2>
-
-
-
-  <div class="product">
-
-
-
-    <h3>Produit Fast</h3>
-
-
-
-    <p>
-
-      Produit de démonstration Haunted Mansion.
-
-    </p>
-
-
-
-    <div class="price">15 €</div>
-
-
-
-    <button
-
-      class="gold-button"
-
-      onclick="contact('Produit Fast')">
-
-      🛒 COMMANDER
-
-    </button>
-
-
+<button class="dark-button" onclick="showPage('products')">
+  ← Retour
+</button>
+```
 
   </div>
 
+</section>
 
+<!-- CONTACT -->
+
+<section id="contact" class="page hidden">
+
+  <div class="hero">
+
+```
+<div class="crest">📞</div>
+
+<h1>CONTACT</h1>
+
+<p>
+  Une question ? Contactez-nous directement sur Telegram.
+</p>
+
+<a
+  href="https://t.me/GhostHit_OFF"
+  style="text-decoration:none;"
+>
+  <button class="gold-button">
+    CONTACTER @GhostHit_OFF
+  </button>
+</a>
+```
+
+  </div>
+
+</section>
+
+<!-- NAV -->
+
+<nav class="bottom-nav">
+
+<button
+id=“navHome”
+class=“nav-button active”
+onclick=“showPage(‘home’)”
+
+
+
+```
+🏠<br>Accueil
+```
+
+  </button>
+
+<button
+id=“navShop”
+class=“nav-button”
+onclick=“showPage(‘categories’)”
+
+
+
+```
+🛍️<br>Boutique
+```
+
+  </button>
+
+<button
+id=“navContact”
+class=“nav-button”
+onclick=“showPage(‘contact’)”
+
+
+
+```
+📞<br>Contact
+```
+
+  </button>
+
+</nav>
 
 </div>
-
-
-
-<div class="contact">
-
-  📞 Contact<br><br>
-
-  <a href="https://t.me/GhostHit_OFF">
-
-    @GhostHit_OFF
-
-  </a>
-
-</div>
-
-  </section>
-
-</main>
 
 <script>
 
+const products = {
+
+  premium: [
+    {
+      name: "Produit Premium 1",
+      description: "Produit de démonstration Haunted Mansion.",
+      price: "5 €",
+      image: "💎"
+    },
+
+    {
+      name: "Produit Premium 2",
+      description: "Produit de démonstration Haunted Mansion.",
+      price: "10 €",
+      image: "✨"
+    }
+  ],
+
+  fast: [
+    {
+      name: "Produit Fast",
+      description: "Produit de démonstration Haunted Mansion.",
+      price: "15 €",
+      image: "🔥"
+    }
+  ]
+
+};
 
 
-function openShop() {
+function hideAll() {
 
-  document.getElementById("home").classList.add("hidden");
-
-  document.getElementById("shop").classList.remove("hidden");
+  document
+    .querySelectorAll(".page")
+    .forEach(page => page.classList.add("hidden"));
 
 }
 
 
+function showPage(page) {
 
-function contact(product) {
+  hideAll();
 
+  const selected = document.getElementById(page);
 
+  selected.classList.remove("hidden");
 
-  const message =
+  selected.classList.remove("fade");
 
-    "Bonjour, je souhaite commander : " + product;
+  void selected.offsetWidth;
 
+  selected.classList.add("fade");
 
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 
-  const url =
+  document
+    .querySelectorAll(".nav-button")
+    .forEach(button => button.classList.remove("active"));
 
-    "https://t.me/GhostHitOFF?text=" +
+  if (page === "home")
+    document.getElementById("navHome").classList.add("active");
 
-    encodeURIComponent(message);
+  if (page === "categories" || page === "products" || page === "detail")
+    document.getElementById("navShop").classList.add("active");
 
-
-
-  window.location.href = url;
-
+  if (page === "contact")
+    document.getElementById("navContact").classList.add("active");
 }
 
 
+function showProducts(category) {
+
+  const list = products[category];
+
+  const title =
+    category === "premium"
+      ? "⭐ Collection Premium"
+      : "🔥 Collection Fast";
+
+  document.getElementById("productsTitle").textContent = title;
+
+  const container = document.getElementById("productsList");
+
+  container.innerHTML = "";
+
+  list.forEach((product, index) => {
+
+    const card = document.createElement("div");
+
+    card.className = "product";
+
+    card.innerHTML = `
+
+      <div class="product-image">
+        ${product.image}
+      </div>
+
+      <div class="product-info">
+
+        <h3>${product.name}</h3>
+
+        <div class="product-description">
+          ${product.description}
+        </div>
+
+        <div class="price">
+          <span>${product.price}</span>
+        </div>
+
+        <button
+          class="gold-button"
+          onclick="showProduct('${category}', ${index})"
+        >
+          VOIR LE PRODUIT
+        </button>
+
+      </div>
+    `;
+
+    container.appendChild(card);
+
+  });
+
+  showPage("products");
+}
+
+
+function showProduct(category, index) {
+
+  const product = products[category][index];
+
+  document.getElementById("detailImage").textContent =
+    product.image;
+
+  document.getElementById("detailName").textContent =
+    product.name;
+
+  document.getElementById("detailDescription").textContent =
+    product.description;
+
+  document.getElementById("detailPrice").innerHTML =
+    "<span>" + product.price + "</span>";
+
+  document.getElementById("orderButton").onclick = function() {
+
+    const message =
+      "Bonjour, je souhaite commander : " +
+      product.name +
+      " (" +
+      product.price +
+      ")";
+
+    window.location.href =
+      "https://t.me/GhostHitOFF?text=" +
+      encodeURIComponent(message);
+
+  };
+
+  showPage("detail");
+}
 
 </script>
 
 </body>
-
 </html>
-
-
