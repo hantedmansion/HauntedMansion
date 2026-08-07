@@ -1,1 +1,471 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Haunted Mansion</title>
+
+  <style>
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+
+
+    body {
+
+      background: #080808;
+
+      color: #f5f5f5;
+
+      font-family: Arial, sans-serif;
+
+      min-height: 100vh;
+
+    }
+
+
+
+    header {
+
+      padding: 24px 20px;
+
+      text-align: center;
+
+      border-bottom: 1px solid #2d2615;
+
+    }
+
+
+
+    .logo {
+
+      font-size: 27px;
+
+      font-weight: 800;
+
+      letter-spacing: 3px;
+
+      color: #d6b45a;
+
+    }
+
+
+
+    .subtitle {
+
+      margin-top: 7px;
+
+      color: #999;
+
+      font-size: 13px;
+
+    }
+
+
+
+    main {
+
+      max-width: 600px;
+
+      margin: auto;
+
+      padding: 25px 18px 40px;
+
+    }
+
+
+
+    .hero {
+
+      text-align: center;
+
+      padding: 45px 20px;
+
+    }
+
+
+
+    .hero h1 {
+
+      font-size: 32px;
+
+      margin-bottom: 12px;
+
+    }
+
+
+
+    .hero p {
+
+      color: #aaa;
+
+      line-height: 1.6;
+
+      margin-bottom: 28px;
+
+    }
+
+
+
+    button {
+
+      border: none;
+
+      cursor: pointer;
+
+      border-radius: 14px;
+
+      padding: 15px 20px;
+
+      font-size: 15px;
+
+      font-weight: bold;
+
+    }
+
+
+
+    .gold-button {
+
+      background: #d6b45a;
+
+      color: #080808;
+
+      width: 100%;
+
+    }
+
+
+
+    .category {
+
+      margin-top: 25px;
+
+    }
+
+
+
+    .category h2 {
+
+      font-size: 21px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+
+    .product {
+
+      background: #111;
+
+      border: 1px solid #292929;
+
+      border-radius: 18px;
+
+      padding: 18px;
+
+      margin-bottom: 14px;
+
+    }
+
+
+
+    .product h3 {
+
+      margin-bottom: 8px;
+
+    }
+
+
+
+    .product p {
+
+      color: #aaa;
+
+      font-size: 14px;
+
+      line-height: 1.5;
+
+      margin-bottom: 15px;
+
+    }
+
+
+
+    .price {
+
+      color: #d6b45a;
+
+      font-weight: bold;
+
+      margin-bottom: 14px;
+
+    }
+
+
+
+    .contact {
+
+      margin-top: 30px;
+
+      text-align: center;
+
+      padding: 20px;
+
+      border-top: 1px solid #292929;
+
+    }
+
+
+
+    .contact a {
+
+      color: #d6b45a;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+    }
+
+
+
+    .hidden {
+
+      display: none;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">HAUNTED MANSION</div>
+
+  <div class="subtitle">Premium Collection</div>
+
+</header>
+
+<main>
+
+  <section id="home" class="hero">
+
+    <h1>Bienvenue</h1>
+
+<p>
+
+  Découvrez notre collection et choisissez votre produit.
+
+</p>
+
+
+
+<button class="gold-button" onclick="openShop()">
+
+  🛍️ OUVRIR LA BOUTIQUE
+
+</button>
+
+  </section>
+
+  <section id="shop" class="hidden">
+
+<div class="category">
+
+  <h2>⭐ Collection Premium</h2>
+
+
+
+  <div class="product">
+
+    <h3>Produit Premium 1</h3>
+
+
+
+    <p>
+
+      Produit de démonstration Haunted Mansion.
+
+    </p>
+
+
+
+    <div class="price">5 €</div>
+
+
+
+    <button
+
+      class="gold-button"
+
+      onclick="contact('Produit Premium 1')">
+
+      🛒 COMMANDER
+
+    </button>
+
+  </div>
+
+
+
+  <div class="product">
+
+    <h3>Produit Premium 2</h3>
+
+
+
+    <p>
+
+      Produit de démonstration Haunted Mansion.
+
+    </p>
+
+
+
+    <div class="price">10 €</div>
+
+
+
+    <button
+
+      class="gold-button"
+
+      onclick="contact('Produit Premium 2')">
+
+      🛒 COMMANDER
+
+    </button>
+
+  </div>
+
+
+
+</div>
+
+
+
+<div class="category">
+
+  <h2>🔥 Collection Fast</h2>
+
+
+
+  <div class="product">
+
+
+
+    <h3>Produit Fast</h3>
+
+
+
+    <p>
+
+      Produit de démonstration Haunted Mansion.
+
+    </p>
+
+
+
+    <div class="price">15 €</div>
+
+
+
+    <button
+
+      class="gold-button"
+
+      onclick="contact('Produit Fast')">
+
+      🛒 COMMANDER
+
+    </button>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+<div class="contact">
+
+  📞 Contact<br><br>
+
+  <a href="https://t.me/GhostHit_OFF">
+
+    @GhostHit_OFF
+
+  </a>
+
+</div>
+
+  </section>
+
+</main>
+
+<script>
+
+
+
+function openShop() {
+
+  document.getElementById("home").classList.add("hidden");
+
+  document.getElementById("shop").classList.remove("hidden");
+
+}
+
+
+
+function contact(product) {
+
+
+
+  const message =
+
+    "Bonjour, je souhaite commander : " + product;
+
+
+
+  const url =
+
+    "https://t.me/GhostHit_OFF?text=" +
+
+    encodeURIComponent(message);
+
+
+
+  window.location.href = url;
+
+}
+
+
+
+</script>
+
+</body>
+
+</html>
+
 
